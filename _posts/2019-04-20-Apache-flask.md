@@ -7,7 +7,7 @@ keywords: Apache, mod_wsgi, Flask, Windows
 ---
 
 在Windows环境，采用Apache + mod_wsgi的方式部署flask，不如Linux下方便。    
-Apache、mod_wsgi、python三者必须是同位数，比如同为X64或者同为X86。另外，查看对应的VC版本。  
+Apache、mod_wsgi、python三者必须是同位数，比如同为X64或者X86。另外，查看对应的VC版本。  
 说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)  
 
 ****
@@ -26,4 +26,8 @@ Apache、mod_wsgi、python三者必须是同位数，比如同为X64或者同为
 第3点可以自行选择是否准备启用虚拟环境，本教程中使用虚拟主机。  
 打开cmd，cd到"C:\Apache24\bin"，运行"httpd –k install"安装Apache服务，顺便启动它。  
 (常用命令：运行服务httpd –k start，停止服务 httpd –k stop ，也可以直接从服务器管理器中操作)  
+ 
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g29grijjq5j30ma09x75d.jpg "安装后服务器管理器中看到Apache.24服务")  
+
+
+## 安装mod_wsgi
