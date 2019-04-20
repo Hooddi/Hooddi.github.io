@@ -1,3 +1,11 @@
+---
+layout: post
+title: 在Windows环境，采用Apache + mod_wsgi的方式部署flask
+categories: Flask部署
+description: 一在Windows环境，采用Apache + mod_wsgi的方式部署flask
+keywords: Apache, mod_wsgi, Flask, Windows
+---
+
 # 在Windows环境，采用Apache + mod_wsgi的方式部署flask
 在Windows环境中部署flask不如Linux下方便。  
 Apache、mod_wsgi、python三者必须是同位数，比如同为X64或者同为X86。另外，查看对应的VC版本。  
