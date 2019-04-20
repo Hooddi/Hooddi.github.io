@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: 持续学习……
-keywords: 好学长, haoxuezhang，何佳豪
+keywords: Hooddi, hust-hudi，胡迪
 comments: true
 menu: 关于
 permalink: /about/
