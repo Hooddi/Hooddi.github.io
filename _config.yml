@@ -4,10 +4,10 @@
 baseurl:
 url: 
 date_format: "ordinal"
-title: 好学长
+title: Hooddi
 subtitle: "持续学习……"
-description: "何佳豪的个人站点"
-keywords: 好学长，haoxuezhang，何佳豪，hejiahao
+description: "胡迪的个人站点"
+keywords: Hooddi，hust-hudi，胡迪，Di Hu
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,12 +15,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Jiahao He
+author: Di Hu
 organization: 
 organization_url: 
-github_username: haoxuezhang
+github_username: Hooddi
 location: Wuhan, China
-email: jiahaohe_123@163.com
+email: hudi_0011@yeah.net
 
 # ---------------- #
 #    Navigation    #
@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: haoxuezhang/haoxuezhang.github.io
+repository: Hooddi/Hooddi.github.io
 
 # ---------------- #
 #      Comments    #
@@ -95,15 +95,15 @@ disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: haoxuezhang
+    owner: Hooddi
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: haoxuezhang
-    repo: haoxuezhang.github.io
+    owner: Hooddi
+    repo: Hooddi.github.io
     clientID: 8a5950d4dbd3f0b8586a
     clientSecret: 85ee136b6f83d01fd93b04c0c0b74bc08b169832
 # 在使用其它评论组件时可点击显示 Disqus
