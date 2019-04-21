@@ -38,7 +38,7 @@ Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X8
    
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2a9upnwtsj30l5053mxg.jpg)	
 	
-***
+****
 ## 安装mod_wsgi
 [mod_wsgi下载地址](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi?tdsourcetag=s_pctim_aiomsg)	  
   
@@ -67,8 +67,8 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
  ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)  
    
  到此，mod_wsgi安装完成并在Apache的conf文件中修改相关配置信息。  
- ***
- ## 测试
+****
+## 测试
  本教程是在虚拟环境中部署flask，python虚拟环境自行百度  
 ```pip install virtualenv```  
 切换到目标文件夹下，创建虚拟环境：
@@ -114,7 +114,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 表示启用虚拟环境，即test.py是在虚拟环境中运行  
 **F:\Github_hudi\Public\Apache_Flask_windows**表示项目路径（目标文件夹）  
 在wsgi入口文件中，**路径一定要用r''包起来**，否则可能会出错!  
-***
+****
 配置Apache的**vhost.conf文件**  
 打开httpd-vhost.conf,在文件最后加上test.wsgi的配置信息：  
 ```
@@ -130,6 +130,6 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 </VirtualHost>
 ```  
 保存文件，重启Apache。  
-***
+****
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。  
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)  
