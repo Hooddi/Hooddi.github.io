@@ -8,7 +8,7 @@ keywords: Apache, mod_wsgi, Flask, Windows
 
 在Windows环境，采用Apache + mod_wsgi的方式部署flask，不如Linux下方便。    
 Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X86。另外，查看对应的VC版本。  
-说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)  
+说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)
 
 ****
 ## 安装Apache
@@ -31,18 +31,17 @@ Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X8
 (常用命令：运行服务```httpd –k start```，```停止服务 httpd –k stop```，也可以直接从服务器管理器中操作)  
 打开服务器管理器可以看到**Apache2.4服务**，如下图所示：
  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g29grijjq5j30ma09x75d.jpg "服务器管理器中Apache2.4服务")  
-  
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g29grijjq5j30ma09x75d.jpg "服务器管理器中Apache2.4服务")
+
 在浏览器中输入网址："localhost:8080"，看到下图说明Apache安装成功  
-说明：8080端口与conf文件中一致	
-   
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2a9upnwtsj30l5053mxg.jpg)	
-	
+说明：8080端口与conf文件中一致 
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2a9upnwtsj30l5053mxg.jpg)
+
 ## 安装mod_wsgi
-[mod_wsgi下载地址](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi?tdsourcetag=s_pctim_aiomsg)	  
-  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2aa2t2y02j30q507rq3q.jpg)  
-  
+[mod_wsgi下载地址](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi?tdsourcetag=s_pctim_aiomsg)
+
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2aa2t2y02j30q507rq3q.jpg)
+
 "cp35"表示对应python3.5，选择与python版本对应的下载。  
 本教程选择的是:
 >mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl  
@@ -51,16 +50,16 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
 可以直接通过pip安装：```pip install mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl```  
 使用pip安装后，使用cmd进入python目录下的Scripts文件夹，运行：  
 ```mod_wsgi-express module-config ```  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2aau8twvej30r70630ss.jpg)  
-  
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2aau8twvej30r70630ss.jpg)
+
 将上图中红色方框中的**三行信息复制**，打开conf文件  
 找到：**# LoadModule foo_module modules/mod_foo.so**  
 将复制的信息粘贴在下方，表示使用wsgi来作为Python Web服务网关接口
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab0l6156j30xz06zq36.jpg)
 
 此时，重启Apache服务，可以看到Apache服务的名字变了，如下图所示：  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)  
-   
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)
+
 到此，mod_wsgi安装完成并在Apache的conf文件中修改相关配置信息。 
 ## 测试
 本教程是在虚拟环境中部署flask，python虚拟环境自行百度  
@@ -125,5 +124,5 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 ```  
 保存文件，重启Apache。
   
-测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)  
+测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)
