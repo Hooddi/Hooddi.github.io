@@ -55,9 +55,8 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
   
 将上图中红色方框中的**三行信息复制**，打开conf文件  
 找到：**# LoadModule foo_module modules/mod_foo.so**  
-将复制的信息粘贴在下方，表示使用wsgi来作为Python Web服务网关接口  
-![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab0l6156j30xz06zq36.jpg)  
-  
+将复制的信息粘贴在下方，表示使用wsgi来作为Python Web服务网关接口
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab0l6156j30xz06zq36.jpg)
 此时，重启Apache服务，可以看到Apache服务的名字变了，如下图所示：  
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)  
    
