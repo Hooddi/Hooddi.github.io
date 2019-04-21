@@ -46,6 +46,7 @@ Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X8
 "cp35"表示对应python3.5，选择与python版本对应的下载。  
 本教程选择的是:
 >mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl  
+
 mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中，本教程选择安装在本地。  
 可以直接通过pip安装：```pip install mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl```  
 使用pip安装后，使用cmd进入python目录下的Scripts文件夹，运行：  
