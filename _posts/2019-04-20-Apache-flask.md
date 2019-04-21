@@ -10,7 +10,7 @@ keywords: Apache, mod_wsgi, Flask, Windows
 Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X86。另外，查看对应的VC版本。  
 说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)  
 
-**完整项目**:<https://github.com/Hooddi/Apache_flask_windows>  
+**完整项目:** <https://github.com/Hooddi/Apache_flask_windows>
 ****
 ## 安装Apache
 [Apache下载地址](https://www.apachelounge.com/download/)  
