@@ -80,6 +80,7 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
 当虚拟环境搭建好之后，运行：  
 ```deactivate```  
 关闭虚拟环境  
+  
 ****
 首先，目标文件夹中创建test.py  
 ```python
@@ -114,6 +115,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 表示启用虚拟环境，即test.py是在虚拟环境中运行  
 **F:\Github_hudi\Public\Apache_Flask_windows**表示项目路径（目标文件夹）  
 在wsgi入口文件中，**路径一定要用r''包起来**，否则可能会出错!  
+
 ****
 配置Apache的**vhost.conf文件**  
 打开httpd-vhost.conf,在文件最后加上test.wsgi的配置信息：  
@@ -130,6 +132,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 </VirtualHost>
 ```  
 保存文件，重启Apache。  
+   
 ****
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。  
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)  
