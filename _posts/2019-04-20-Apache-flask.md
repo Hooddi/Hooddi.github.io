@@ -8,8 +8,9 @@ keywords: Apache, mod_wsgi, Flask, Windows
 
 在Windows环境，采用Apache + mod_wsgi的方式部署flask，不如Linux下方便。    
 Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X86。另外，查看对应的VC版本。  
-说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)
+说明：在Windows环境中，Apache不支持flask中的多进程或多线程功能，具体见 [flask](http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/)  
 
+**完整项目**:<https://github.com/Hooddi/Apache_flask_windows>
 ****
 ## 安装Apache
 [Apache下载地址](https://www.apachelounge.com/download/)  
@@ -132,3 +133,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)
+## 参考文献
+[☆☆☆☆☆☆](https://zhuanlan.zhihu.com/p/43354041)  
+[☆☆☆☆☆ ](https://www.cnblogs.com/cxchanpin/p/6936880.html  
+[☆☆☆☆☆ ](https://blog.csdn.net/zhangtao0417/article/details/81564444)  
