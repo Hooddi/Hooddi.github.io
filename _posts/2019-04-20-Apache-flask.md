@@ -62,25 +62,29 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
   
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab0l6156j30xz06zq36.jpg)  
   
- 此时，重启Apache服务，可以看到Apache服务的名字变了，如下图所示：  
+此时，重启Apache服务，可以看到Apache服务的名字变了，如下图所示：  
   
- ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)  
+![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ab44jxqfj30d209bt8v.jpg)  
    
- 到此，mod_wsgi安装完成并在Apache的conf文件中修改相关配置信息。  
+到此，mod_wsgi安装完成并在Apache的conf文件中修改相关配置信息。 
 ****
 ## 测试
  本教程是在虚拟环境中部署flask，python虚拟环境自行百度  
 ```pip install virtualenv```  
+  
 切换到目标文件夹下，创建虚拟环境：  
 ```virtualenv venv```  
+  
 此时，目标文件夹中生成"venv"文件, 切换到.\venv\Scripts目录下，运行：  
 ```activate```  
+  
 当虚拟环境激活后，可以运用pip在虚拟环境中安装需要用到的工具包，不与本地工具包冲突（用虚拟环境的原因）。本教程中仅安装Flask：  
 ```pip inatll flask```  
+  
 当虚拟环境搭建好之后，运行：  
 ```deactivate```  
-关闭虚拟环境  
   
+关闭虚拟环境
 ****
 首先，目标文件夹中创建test.py  
 ```python
@@ -97,7 +101,8 @@ def hello_2():
 @app.route('/')
 if __name__ == '__main__':
 	app.run()
-```
+```  
+  
 然后，目标文件夹中创建test.wsgi（wsgi入口文件）  
 ```
 activate_this = r'F:\Github_hudi\Public\Apache_Flask_windows\venv\Scripts\activate_this.py'
@@ -106,16 +111,17 @@ import sys
 #Expand Python classes path with your app's path
 sys.path.insert(0, r'F:\Github_hudi\Public\Apache_Flask_windows')
 from test import app as application
-```
+```  
+  
 其中：  
 ```
 activate_this = r'F:\Github_hudi\Public\Apache_Flask_windows\venv\Scripts\activate_this.py'
 exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__file__=activate_this))
 ```  
+  
 表示启用虚拟环境，即test.py是在虚拟环境中运行  
 **F:\Github_hudi\Public\Apache_Flask_windows**表示项目路径（目标文件夹）  
-在wsgi入口文件中，**路径一定要用r''包起来**，否则可能会出错!  
-
+在wsgi入口文件中，**路径一定要用r''包起来**，否则可能会出错!
 ****
 配置Apache的**vhost.conf文件**  
 打开httpd-vhost.conf,在文件最后加上test.wsgi的配置信息：  
@@ -131,8 +137,8 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 	</Directory>
 </VirtualHost>
 ```  
-保存文件，重启Apache。  
-   
+  
+保存文件，重启Apache。
 ****
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。  
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)  
