@@ -135,6 +135,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)
 
+若自己在测试过程中出现500或404等错误时，**查看Apache中的错误日志文件**快速找到错误原因
 ## 参考文献
 ★★★★★<http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/>  
 ★★★★★<https://zhuanlan.zhihu.com/p/43354041>   
