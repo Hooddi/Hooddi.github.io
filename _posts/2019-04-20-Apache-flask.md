@@ -123,6 +123,6 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 </VirtualHost>
 ```  
 保存文件，重启Apache。
-  
+
 测试：在浏览器中输入网址："localhost:8080/hudi"，若看到下图所示信息，表示部署成功。
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)
