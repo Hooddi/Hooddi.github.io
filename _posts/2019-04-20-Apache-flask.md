@@ -135,7 +135,7 @@ exec(compile(open(activate_this, "rb").read(), activate_this, 'exec'), dict(__fi
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2ad87erdtj30qm0693yt.jpg)
 
 ## 参考文献
-☆☆☆☆☆☆<http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/>  
-☆☆☆☆☆☆<https://zhuanlan.zhihu.com/p/43354041>   
-☆☆☆☆☆ <https://www.cnblogs.com/cxchanpin/p/6936880.html>  
-☆☆☆☆☆ <https://blog.csdn.net/zhangtao0417/article/details/81564444>  
+★★★★★<http://flask.pocoo.org/docs/1.0/deploying/mod_wsgi/>  
+★★★★★<https://zhuanlan.zhihu.com/p/43354041>   
+★★★★ <https://www.cnblogs.com/cxchanpin/p/6936880.html>  
+★★★★ <https://blog.csdn.net/zhangtao0417/article/details/81564444>  
