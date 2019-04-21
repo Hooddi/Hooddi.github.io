@@ -45,9 +45,12 @@ Apache、mod_wsgi、python三者必须是**同位数**，比如同为X64或者X8
 >mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl  
 
 mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中，本教程选择安装在本地。  
-可以直接通过pip安装：```pip install mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl```  
-使用pip安装后，使用cmd进入python目录下的Scripts文件夹，运行：  
-```mod_wsgi-express module-config ```  
+可以直接通过pip安装:
+>pip install mod_wsgi-4.5.24+ap24vc14-cp35-cp35m-win_amd64.whl
+
+使用pip安装后，使用cmd进入python目录下的Scripts文件夹，运行:
+>mod_wsgi-express module-config
+
 ![](https://ws1.sinaimg.cn/large/005v4RA1ly1g2aau8twvej30r70630ss.jpg)
 
 将上图中红色方框中的**三行信息复制**，打开conf文件  
@@ -60,16 +63,21 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
 
 到此，mod_wsgi安装完成并在Apache的conf文件中修改相关配置信息。 
 ## 测试
-本教程是在虚拟环境中部署flask，python虚拟环境自行百度  
-```pip install virtualenv```  
-切换到目标文件夹下，创建虚拟环境：  
-```virtualenv venv```  
-此时，目标文件夹中生成"venv"文件, 切换到.\venv\Scripts目录下，运行：  
-```activate```  
+本教程是在虚拟环境中部署flask，python虚拟环境自行百度
+>pip install virtualenv
+ 
+切换到目标文件夹下，创建虚拟环境:
+>virtualenv venv
+
+此时，目标文件夹中生成"venv"文件, 切换到.\venv\Scripts目录下，运行；
+>activate
+
 当虚拟环境激活后，可以运用pip在虚拟环境中安装需要用到的工具包，不与本地工具包冲突（用虚拟环境的原因）。本教程中仅安装Flask：  
-```pip inatll flask```  
+>pip inatll flask
+
 当虚拟环境搭建好之后，运行：  
-```deactivate```  
+>deactivate
+
 关闭虚拟环境
 
 首先，目标文件夹中创建test.py文件
