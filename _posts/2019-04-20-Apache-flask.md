@@ -24,9 +24,9 @@ Apache、mod_wsgi、python三者必须是同位数，比如同为X64或者X86。
 	* #Include conf/extra/httpd-vhosts.conf 前面的#去掉  
 
 第3点可以自行选择是否准备启用虚拟环境，本教程中使用虚拟主机。  
+  
 修改conf文件后，保存。   
-打开cmd，cd到"C:\Apache24\bin"，运行:  
-```httpd –k install```  
+打开cmd，cd到"C:\Apache24\bin"，运行: ```httpd –k install```  
 安装Apache服务，顺便启动它。  
 (常用命令：运行服务httpd –k start，停止服务 httpd –k stop ，也可以直接从服务器管理器中操作)  
 此时，打开服务器管理器可以看到**Apache2.4服务**，如下图所示：
