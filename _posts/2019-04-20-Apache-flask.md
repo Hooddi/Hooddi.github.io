@@ -71,7 +71,7 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
 ## 测试
  本教程是在虚拟环境中部署flask，python虚拟环境自行百度  
 ```pip install virtualenv```  
-切换到目标文件夹下，创建虚拟环境：
+切换到目标文件夹下，创建虚拟环境：  
 ```virtualenv venv```  
 此时，目标文件夹中生成"venv"文件, 切换到.\venv\Scripts目录下，运行：  
 ```activate```  
