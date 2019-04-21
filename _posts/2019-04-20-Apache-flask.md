@@ -94,7 +94,7 @@ def hello_1():
 @app.route('/hudi')
 def hello_2():
 	return 'Hello hudi!'
-@app.route('/')
+
 if __name__ == '__main__':
 	app.run()
 ```  
