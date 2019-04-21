@@ -80,7 +80,7 @@ mod_wsgi可以选择安装在本地系统或者部署项目时的虚拟环境中
 当虚拟环境搭建好之后，运行：  
 ```deactivate```  
 关闭虚拟环境  
-***
+****
 首先，目标文件夹中创建test.py  
 ```python
 from flask import Flask, request
